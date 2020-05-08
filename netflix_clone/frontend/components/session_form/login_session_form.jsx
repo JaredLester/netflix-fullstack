@@ -50,7 +50,7 @@ class LoginSessionForm extends React.Component {
             <div>
                 <header className="showcase">
                     <div className="showcase-top">
-                        <img src="https://fontmeme.com/temporary/ef5e03deb5f37342d5aadfefd2385825.png" alt="Otakuflix" />
+                        <img src="https://i.imgur.com/fOIHNlR.png" alt="Otakuflix" />
                         
                         
                     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import GreetingContainer from '../greeting/greeting_container';
 
 class SignUpSessionForm extends React.Component {
     constructor(props) {
@@ -27,7 +28,7 @@ class SignUpSessionForm extends React.Component {
     demoLogin(e) {
         e.preventDefault();
         this.setState({
-            email: 'borenil_bhatia@yahoo.com',
+            email: 'joe_Shmoe123@wahoo.com',
             password: 'password' 
         })
     }
@@ -58,10 +59,12 @@ class SignUpSessionForm extends React.Component {
         return (
             <div>
                 <header className="showcase">
+                    
                     <div className="showcase-top">
-                        <img src="https://fontmeme.com/temporary/ef5e03deb5f37342d5aadfefd2385825.png" alt="Otakuflix"/>
+                        <img src="https://i.imgur.com/fOIHNlR.png" alt="Otakuflix"/>
                         
                         <Link to="/login" className="btn btn-rounded">Login</Link>
+                        <GreetingContainer />
                     </div>
                     <div className="showcase-content">
                         <form onSubmit={this.handleSubmit} className="sign-up-form-box">
@@ -89,14 +92,17 @@ class SignUpSessionForm extends React.Component {
                     </div>
                         <input className="sign-up-button" type="submit" value={this.props.formType} />
                         <br/>
+                        <br/>
                             <div className="errors">{this.renderErrors()}</div>
                         <br/>
-                        <a href="#" className="btn btn-xl" onClick={this.demoLogin}>
-                            Demo sign-up
-                        </a>
+                    
                     </form>
                     </div>
                 </header>
+                    
+                        {/* <p className="btn btn-xl" onClick={this.demoLogin}>
+                            Demo sign-up
+                        </p> */}
             </div>
         );
     }

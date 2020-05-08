@@ -44,6 +44,10 @@ h1, h2, h3, h4{
     color: #fff;
 }
 
+h1{
+    z-index: 1;
+}
+
 a {
     color: #fff;
     text-decoration: none;
@@ -98,6 +102,12 @@ img {
     position: absolute;
     top: 50%;
     right: 0%;
+    transform: translate(-50%, -50%);
+}
+.showcase-top p {
+    position: absolute;
+    top: 41%;
+    right: 8%;
     transform: translate(-50%, -50%);
 }
 
@@ -247,7 +257,7 @@ img {
 }
 
 .errors {
-    color: var(--primary-color);
+    color: orange;
     text-transform: uppercase;
     font-weight: bolder;
 }
@@ -272,44 +282,161 @@ img {
     text-transform: uppercase;
 }
 
-/* .sign-up-button{
+.browse-welcome {
+    color: var(--primary-color);
+    z-index: 2;
+}
+
+.browse-new {
+   white-space:nowrap;
+   width: 90%;
+    margin-left: -18px;
+}
+
+.browse-new li {
+   display:inline;
+   margin-left: 30px;
+}
+.browse-funny {
+   white-space:nowrap;
+   width: 90%;
+    margin-left: -18px;
+}
+
+.browse-funny li {
+   display:inline;
+   margin-left: 30px;
+}
+.browse-other {
+   white-space:nowrap;
+   width: 90%;
+    margin-left: -18px;
+}
+
+.browse-other li {
+   display:inline;
+   margin-left: 30px;
+}
+
+.nav-bar{
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-    padding-right: 3rem;
-} */
+    position: fixed;
+    width: 100%;
+    background-color:rgb(20,20,20);
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+    z-index: 100;
+}
 
+.nav-sub-btns{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: gray;
+    font-family: sans-serif;
+}
 
-/* .showcase-top img{
+.nav-sub-c{
+    margin-right: 20px;
+    align-self: center ;
+}
+
+.browse-logo{
+    margin-right: 25px;
+    margin-left: 25px;
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.header-button{
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-style: none;
     width: 100px;
-     
-} */
- 
-/* html { 
-  background: url(https://i.imgur.com/itmmwlO.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
-
-/* .sign-up-email {
-    position: absolute;
-    top: 50%;
-    left: 35%;
+    margin-top: 100px;
+    height: 45px;
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+    position: relative;
 }
 
-.sign-up-password {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.header-button:hover{
+    background-color: darkred;
+}
+
+.selected-nav{
+    color: white;
+}
+
+.nav-home:hover{
+    color: darkgray;
+}
+
+.nav-tv-shows:hover{
+    color: darkgray;
+}
+
+.nav-movies:hover{
+    color: darkgray;
+}
+
+.nav-mylist:hover{
+    color: darkgray;
+}
+
+.header-group{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.header-name{
+    font-size: 20px;
+}
+
+.selectedVideos{
+    transition: transform .2s;
+}
+
+.selectedVideos:hover{
+    transform: scale(1.25);
+}
+
+.main-video{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    height: 80%;
+    /* width: 100vw;
+    object-fit: fill; */
+}
+.selectedVideosMain{
+    display: flex;
+    justify-content: center;
+    /* width: 90vw;
+    height: 85vh;
+    object-fit: fill; */ */
+}
+.main{
+    height: 80%;
 }
 
 
-img{
-    width: 180px;
-} */
+.genre{
+    margin-left: 25px;
+}
 
+.selectedVideo{
+    padding-left: 45px;
+    height: 95vh;
+    width: 95vw;
+    
+    object-fit: fill;
+
+}

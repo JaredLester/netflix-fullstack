@@ -15,7 +15,9 @@ const mapDispatchToProps = dispatch => {
     return {
         processForm: (user) => dispatch(signup(user)),
         clearSessionErrors: () => dispatch(clearSessionErrors()),
-        demoLogin: () => dispatch(login(demoUser))
+        demoLogin: () => dispatch(login({
+            email: 'borenil_bhatia@yahoo.com',
+            password: 'password'}))
     };
 };
 

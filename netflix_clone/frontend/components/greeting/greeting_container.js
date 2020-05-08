@@ -12,7 +12,7 @@ const mapStateToProps = ({ session, entities: { users } }) => {
 const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
     demoLogin: () => dispatch(login({
-        email: 'borenil_bhatia@yahoo.com',
+        email: 'joe_Shmoe123@wahoo.com',
         password: 'password'
     }))
 });
