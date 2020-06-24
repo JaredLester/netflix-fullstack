@@ -1,0 +1,512 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+/* header {
+    background-image: url(https://fontmeme.com/temporary/ef5e03deb5f37342d5aadfefd2385825.png) no-repeat;
+} */
+
+:root {
+    --primary-color: #e50914;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4{
+    color: #fff;
+}
+
+h1{
+    z-index: 1;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+    background: url(https://i.imgur.com/itmmwlO.jpg) no-repeat center center/cover;
+    background-position: center;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0, 0.6);
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+
+    
+}
+
+.showcase-top img {
+    width: 250px;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+.showcase-top a {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+}
+.showcase-top p {
+    position: absolute;
+    top: 41%;
+    right: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    margin-top: 15rem;  
+}
+
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin-top: 0 0 2rem;
+
+}
+
+.showcase-content p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0, 0.45);
+    border-radius: 2px;
+}
+
+.sign-up-email {
+    border-radius: 3px;
+    border-style: none;
+    height: 60px;
+    width: 380px;
+    margin: 5px;
+    padding-left: 20px;
+}
+
+.blackbox {
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.sign-up-input {
+    border-radius: 3px;
+    border-style: none;
+    height: 60px;
+    width: 380px;
+    margin: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.login-form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    position: absolute;
+}
+
+.login-input {
+    background-color: #333;
+    border-radius: 5px;
+    justify-content: center;
+    
+    color: white;
+    height: 50px;
+    font-size: 16px;
+    width: 350px;
+    border-style: none;
+    /* margin: 0 65px 0 65px; */
+    margin-top: 1rem;
+    padding-left: 20px;
+
+}
+
+.login-button {
+    background-color: #e50914;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-style: none;
+    width: 350px;
+    margin-top: 100px;
+    height: 45px;
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+    position: relative;
+    margin-top: 1rem;
+}
+.sign-up-button {
+    background-color: #e50914;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-style: none;
+    width: 350px;
+    margin-top: 100px;
+    height: 45px;
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.back-to-signup{
+    color: var(--primary-color);
+}
+.back-to-message {
+    font-size: 16px;
+}
+
+.errors {
+    color: orange;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.btn-xl {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+
+.browse-welcome {
+    color: var(--primary-color);
+    z-index: 2;
+}
+
+.browse-new {
+   white-space:nowrap;
+   width: 90%;
+    margin-left: -18px;
+}
+
+.browse-new li {
+   display:inline;
+   margin-left: 30px;
+}
+.browse-funny {
+   white-space:nowrap;
+   width: 90%;
+    margin-left: -18px;
+}
+
+.browse-funny li {
+   display:inline;
+   margin-left: 30px;
+}
+.browse-other {
+   white-space:nowrap;
+   width: 90%;
+    margin-left: -18px;
+}
+
+.browse-other li {
+   display:inline;
+   margin-left: 30px;
+}
+
+.nav-bar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color:rgb(20,20,20);
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+    z-index: 100;
+}
+
+.nav-sub-btns{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: gray;
+    font-family: sans-serif;
+}
+
+.nav-sub-c{
+    margin-right: 20px;
+    align-self: center ;
+}
+
+.browse-logo{
+    margin-right: 25px;
+    margin-left: 25px;
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.header-button{
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-style: none;
+    width: 100px;
+    margin-top: 100px;
+    height: 45px;
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+    position: relative;
+}
+
+.header-button:hover{
+    background-color: darkred;
+}
+
+.selected-nav{
+    color: white;
+}
+
+.nav-home:hover{
+    color: darkgray;
+}
+
+.nav-tv-shows:hover{
+    color: darkgray;
+}
+
+.nav-movies:hover{
+    color: darkgray;
+}
+
+.nav-mylist:hover{
+    color: darkgray;
+}
+
+.header-group{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.header-name{
+    font-size: 20px;
+}
+
+.selectedVideos{
+    transition: transform .2s;
+}
+
+.selectedVideos:hover{
+    transform: scale(1.25);
+}
+
+.main-video{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    height: 80%;
+    /* width: 100vw;
+    object-fit: fill; */
+}
+.selectedVideosMain{
+    display: flex;
+    justify-content: center;
+    /* width: 90vw;
+    height: 85vh;
+    object-fit: fill; */ */
+}
+.main{
+    height: 80%;
+}
+
+
+.genre{
+    margin-left: 25px;
+}
+
+.selectedVideo{
+    padding-left: 45px;
+    height: 95vh;
+    width: 95vw;
+    
+    object-fit: fill;
+
+}
+
+.footer-content-box {
+    font-size: 14px;
+    background-color:rgb(10, 10, 10);
+    border-top: 5px solid rgb(19, 18, 18);
+    padding-left: 50px;
+}
+
+.footer-icons {
+    display: flex;
+    margin: 15px 0px 0px 0px;
+    margin-bottom: 20px;
+}
+
+.social-media-link {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+
+.footer-description {
+    margin-left: 15px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-ul-topics {
+    column-count: 2;
+}
+
+.footer-creator {
+    padding: 0px 30px 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.list-index-button {
+    margin-left: 222px;
+    margin-top: -61px;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(133, 133, 133, 0.6);
+    border-radius: 50%;
+    border: 1.8px solid white;
+    position: absolute;
+    /* display: none; */
+    visibility: hidden;
+    z-index: 102;
+}
+
+/* .vid-row {
+    z-index: 1;
+} */
+
+/* .nav-bar-right-search {
+    padding: 5px;
+    margin: 5px;
+    margin-right: 15px;
+    margin-left: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+} */
+
