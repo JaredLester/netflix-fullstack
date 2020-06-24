@@ -49,7 +49,7 @@ class Search extends React.Component {
         if (filteredVideos.length === 0) {
             return (
                 <div>
-                    <header style={{ display: "flex" }}>
+                    {/* <header style={{ display: "flex" }}> */}
                         {/* <NavBarContainer /> */}
                         <div className="search">
                             <input
@@ -60,7 +60,7 @@ class Search extends React.Component {
                                 onChange={this.updateSearch.bind(this)}
                             />
                         </div>
-                    </header>
+                    {/* </header> */}
                     <div className="error-message">Sorry, could not find any videos that match.</div>
                 </div>
             )
