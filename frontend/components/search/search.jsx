@@ -24,7 +24,7 @@ class Search extends React.Component {
 
 
     onHoverPlay(e) {
-        e.currentTarget.play(); 
+        e.currentTarget.play();  
     }
 
     onLeave(e) {
